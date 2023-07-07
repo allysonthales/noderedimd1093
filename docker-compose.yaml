@@ -1,0 +1,25 @@
+version: "3"
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    restart: always
+    ports:
+      - 1883:1883
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_logs:/mosquitto/log
+
+  nodered:
+    image: nodered/node-red:latest
+    restart: always
+    command: node-red --max-old-space-size=512 
+    ports:
+      - 1880:1880
+    volumes:
+      - nodered_data:/data
+
+volumes:
+  mosquitto_data:
+  mosquitto_logs:
+  nodered_data:

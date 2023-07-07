@@ -1,4 +1,4 @@
-# Projeto de Controle de Temperatura de Aquário com ESP32
+# Projeto de Monitoramento de Temperatura de Aquário com ESP32
 
 O projeto consiste em um sistema de controle de temperatura para um aquário, utilizando um ESP32 conectado a um relé e um sensor de temperatura DS18B20 à prova d'água. Os dados de temperatura são enviados para uma máquina na plataforma Google Cloud, que executa em container o broker MQTT Mosquitto e o Node-RED.
 

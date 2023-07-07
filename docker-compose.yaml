@@ -11,9 +11,9 @@ services:
       - mosquitto_logs:/mosquitto/log
 
   nodered:
-    image: nodered/node-red:latest
+    image: fourssuh/noderedimd1093
     restart: always
-    command: node-red --max-old-space-size=512 
+    command: node-red --max-old-space-size=512
     ports:
       - 1880:1880
     volumes:
